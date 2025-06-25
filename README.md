@@ -1,7 +1,7 @@
 # Carrusel de Imágenes
-## 🚀 Tecnologías Utilizadas
+## 🔧 Tecnologías Utilizadas
 
-Aquí te muestro las principales tecnologías usadas en este proyecto:
+Tecnologías usadas en el proyecto:
 
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Badge"/>
@@ -11,13 +11,13 @@ Aquí te muestro las principales tecnologías usadas en este proyecto:
 
 ---
 
-### 🛠️ Descripción de Tecnologías
+###  Descripción de Tecnologías
 
-| 🔧 Tecnología | 🎨 Color | 📄 Descripción                         |
-|---------------|----------|----------------------------------------|
-| **HTML5**     | 🟥 Rojo   | Lenguaje de marcado para estructurar contenido |
-| **CSS3**      | 🟦 Azul   | Hojas de estilo para diseño visual           |
-| **jQuery**    | 🟪 Violeta| Librería JS para manipulación del DOM         |
+| 🔧 Tecnología | 📄 Descripción                         |
+|---------------|----------------------------------------|
+| **HTML5**     | Lenguaje de marcado para estructurar contenido |
+| **CSS3**      | Hojas de estilo para diseño visual           |
+| **jQuery**    | Librería JS para manipulación del DOM         |
 
 ---
 
