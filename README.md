@@ -1,6 +1,6 @@
 # Carrusel de Imágenes
-[![Version](https://img.shields.io/badge/version-1.0.0-blue)]
-[![License](https://img.shields.io/badge/license-MIT-green)]
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 ## 🔧 Tecnologías Utilizadas
 
 Tecnologías usadas en el proyecto:
