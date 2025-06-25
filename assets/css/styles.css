@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+    color: #333;
+    padding: 15px;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: border-box;
+    background-color: white;
+    margin: auto;
+}
+
+/*Menu de navegacion superior*/
+.encabezado {
+    background-color: teal;
+    color: white;
+    padding: 15px 80px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /*Crea una cuadricula de 4 columnas, que tienen el mismo tamaño relativo 1fr es decir 1 fraccion del espacion disponible*/
+    gap: 10px;
+    margin: auto;
+}
+
+/**Para lograr que las imagenes se adapten al ancho del contenedor padre es decir a galeria se agrega la classe minatura en las imagenes*/
+.miniatura {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    /*agrego un puntero al pasar por la imagen manito*/
+    object-fit: cover;
+    /*recorto la imagen en caso necesario*/
+
+}
+
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  padding-top: 60px;
+  inset: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-centro {
+  position: relative;
+  text-align: center;
+}
+
+.modal-contenido {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-size: 30px;
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  cursor: pointer;
+  transform: translateY(-50%);
+  user-select: none;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+/* ====== MOVIL (hasta 600px) ====== */
+@media (max-width: 600px) {
+
+    .container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 5px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        box-sizing: border-box;
+        background-color: white;
+        margin: auto;
+    }
+
+    .galeria {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /*Crea una cuadricula de 4 columnas, que tienen el mismo tamaño relativo 1fr es decir 1 fraccion del espacion disponible*/
+        gap: 10px;
+        margin: auto;
+    }
+}
+
+/* ====== TABLET (601px a 1023px) ====== */
+@media (min-width: 601px) and (max-width: 1023px) {
+  .container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 10px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        box-sizing: border-box;
+        background-color: white;
+        margin: auto;
+    }
+
+    .galeria {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /*Crea una cuadricula de 4 columnas, que tienen el mismo tamaño relativo 1fr es decir 1 fraccion del espacion disponible*/
+        gap: 10px;
+        margin: auto;
+    }
+
+
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Galería</title>
+</head>
+
+<body>
+    <div class="encabezado">
+        <h1>Galeria de Imagénes</strong>
+    </div>
+    <div class="container">
+        <div class="galeria">
+            <img src="assets/img/img1.jpg" alt="Imagen 1" class="miniatura" id="img1" data-img_actual="0">
+            <img src="assets/img/img2.jpg" alt="Imagen 2" class="miniatura" id="img2" data-img_actual="1">
+            <img src="assets/img/img3.jpg" alt="Imagen 3" class="miniatura" id="img3" data-img_actual="2">
+            <img src="assets/img/img4.jpg" alt="Imagen 4" class="miniatura" id="img4" data-img_actual="3">
+            <img src="assets/img/img5.jpg" alt="Imagen 5" class="miniatura" id="img5" data-img_actual="4">
+            <img src="assets/img/img6.jpg" alt="Imagen 6" class="miniatura" id="img6" data-img_actual="5">
+            <img src="assets/img/img7.jpg" alt="Imagen 7" class="miniatura" id="img7" data-img_actual="6">
+            <img src="assets/img/img8.jpg" alt="Imagen 8" class="miniatura" id="img8" data-img_actual="7">
+        </div>
+    </div>
+    <div class="modal" id="imageModal">
+        <span class="close">&times;</span>
+        <div class="modal-centro">
+            <!-- Centrar las imagenes del modal, si no se usa las imagenes quedan a la izquierda-->
+            <img class="modal-contenido" id="modalImagen">
+            <button class="nav prev">&#10094;</button>
+            <button class="nav next">&#10095;</button>
+    </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            /*Recorro todas las imagenes que tengo en miniaturas paar guardar su ubicacion*/
+            const images = $(".miniatura").map(function () {
+                return $(this).attr("src");
+            }).get();
+
+            let cont = 0;//variable para guardar posteriormente la imagen que estoy viendo
+
+
+
+            $(".miniatura").on("click", function () {
+                const img_actual = parseInt($(this).attr("data-img_actual"));//obtengo el numero de la imagen que cliqueo
+                $("#modalImagen").attr("src", images[img_actual]); //busco en el arreglo que guarde las imagenes, la que necesito
+                $("#imageModal").fadeIn(); //agrego efecto de fadeIn
+                cont = img_actual;
+            });
+
+            $(".close").on("click", function () {
+                $("#imageModal").fadeOut();
+            });
+
+            $(".next").on("click", function () {
+
+                /*cont = (cont + 1) % images.length;
+                Esta linea suma 1 al img_actual pero si el img_actual es mayor que imagen.length (cantidad de elementos del arreglo) 
+                el contador vuelve a 0 esto es para hacer un ciclo infinito
+                tambien se puede hacer 
+                if (cont + 1 < images.length) {
+                  cont = cont + 1;
+                } else {
+                  cont = 0;
+                }
+                */
+                cont = (cont + 1) % images.length;
+
+                $("#modalImagen").fadeOut(function () {
+                    $(this).attr("src", images[cont]).fadeIn();
+                });
+            });
+
+            $(".prev").on("click", function () {
+
+                /*
+                if(cont > 0){
+                    cont=cont-1;
+                }else{
+                    cont=images.length -1;
+                }
+                
+                */
+                cont = (cont - 1 + images.length) % images.length;
+                $("#modalImagen").fadeOut(function () {
+                    $(this).attr("src", images[cont]).fadeIn();
+                });
+            });
+
+            // Cerrar el modal al hacer clic fuera de la imagen
+            $("#imageModal").on("click", function (e) {
+                if (e.target.id === "imageModal") {
+                    $(this).fadeOut();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
