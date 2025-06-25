@@ -1,4 +1,4 @@
-# B-Carrusel-Imagenes
+Carrusel de Imágenes
 
 # 1.- Objetivo
 Crear una galería de imágenes donde se cumplan los siguientes requisitos utilizando jQuery:
@@ -12,17 +12,17 @@ Estructura HTML:
 Utiliza una estructura básica de HTML con una galería de imágenes pequeñas.
 Cada imagen debe tener un ID único para facilitar la selección con jQuery.
 
-a) CSS:
+### CSS:
 Aplica estilos para que las imágenes miniatura se muestren en una cuadrícula.
 El modal debe estar centrado y oculto por defecto.
 
-b) jQuery:
+### jQuery:
 Mostrar imagen en tamaño grande: Al hacer clic en una miniatura, la imagen debe aparecer en tamaño grande en el modal.
 Navegación entre imágenes: Al hacer clic en los botones de "Siguiente" y "Anterior", la imagen debe cambiar a la siguiente o anterior de la galería.
 Cerrar modal: Al hacer clic en cualquier lugar fuera de la imagen grande o en el botón de cerrar, el modal debe desaparecer.
 Efectos de jQuery: Usa efectos de jQuery como fadeIn, fadeOut, slideUp, etc., para mejorar la interacción.
 
-c) Validación:
+### Validación:
 Asegúrate de que todos los elementos del modal se comporten correctamente sin recargar la página.
 
 
