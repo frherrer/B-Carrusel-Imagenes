@@ -40,4 +40,4 @@ index.html: El archivo principal que contiene la galería y el modal.
 styles.css: Archivo de estilos para la galería y el modal.
 script.js: Archivo que contiene el código jQuery para manejar la interactividad.
 
-![ScreenShot del Carrusel de Imágenes](https://drive.google.com/file/d/1qaMxZhCq5WBrrx3WfmKNYT2NpSrh3-Af/view?usp=drive_link)
+![ScreenShot del Carrusel de Imágenes](https://drive.google.com/file/d/1qaMxZhCq5WBrrx3WfmKNYT2NpSrh3-Af)
