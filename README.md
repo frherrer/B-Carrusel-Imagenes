@@ -1,4 +1,4 @@
-Carrusel de Imágenes
+# Carrusel de Imágenes
 
 # 1.- Objetivo
 Crear una galería de imágenes donde se cumplan los siguientes requisitos utilizando jQuery:
@@ -39,3 +39,5 @@ Asegúrate de que el modal esté centrado en la pantalla y se ajuste bien en dif
 index.html: El archivo principal que contiene la galería y el modal.
 styles.css: Archivo de estilos para la galería y el modal.
 script.js: Archivo que contiene el código jQuery para manejar la interactividad.
+
+![ScreenShot del Carrusel de Imágenes](https://drive.google.com/file/d/1qaMxZhCq5WBrrx3WfmKNYT2NpSrh3-Af/view?usp=drive_link)
